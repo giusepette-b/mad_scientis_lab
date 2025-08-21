@@ -1,0 +1,29 @@
+@layer components {
+  .layout-container {
+    @apply min-h-screen flex flex-col;
+  }
+
+  .layout-header {
+    @apply sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+  }
+
+  .layout-main {
+    @apply flex-1;
+  }
+
+  .layout-footer {
+    @apply border-t bg-muted/40;
+  }
+
+  /* Mobile navigation */
+  .mobile-nav {
+    @apply fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0;
+  }
+
+  .mobile-nav-content {
+    @apply fixed inset-y-0 right-0 z-50 h-full w-3/4 border-l bg-background shadow-lg 
+    data-[state=open]:animate-in data-[state=closed]:animate-out 
+    data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right 
+    sm:max-w-sm;
+  }
+}

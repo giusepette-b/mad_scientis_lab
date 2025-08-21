@@ -1,0 +1,85 @@
+@layer utilities {
+  /* Container queries */
+  .container-type-inline {
+    container-type: inline-size;
+  }
+
+  /* Mobile first utilities */
+  .mobile-only {
+    @apply block;
+  }
+
+  .desktop-only {
+    @apply hidden;
+  }
+
+  @screen sm {
+    .mobile-only {
+      @apply hidden;
+    }
+  }
+
+  @screen md {
+    .desktop-only {
+      @apply block;
+    }
+  }
+
+  /* Aspect ratios */
+  .aspect-video {
+    aspect-ratio: 16/9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1/1;
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .print-break-before {
+      page-break-before: always;
+    }
+
+    .print-break-after {
+      page-break-after: always;
+    }
+
+    .print-break-inside-avoid {
+      page-break-inside: avoid;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .card {
+      border-width: 2px;
+    }
+
+    .btn {
+      border-width: 2px;
+    }
+  }
+
+  /* Touch device detection */
+  @media (pointer: coarse) {
+    .touch-device {
+      /* Styles specific to touch devices */
+    }
+  }
+}

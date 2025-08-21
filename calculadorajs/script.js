@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
         }
     }
-
+ch
     // Função para lidar com o ponto decimal
     function inputDecimal(dot) {
         if (calculator.waitingForSecondOperand) {

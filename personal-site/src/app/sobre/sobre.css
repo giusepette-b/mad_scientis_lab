@@ -1,0 +1,41 @@
+@layer components {
+  .about-container {
+    @apply container-custom py-8;
+  }
+
+  .about-hero {
+    @apply text-center mb-12;
+  }
+
+  .about-content {
+    @apply prose prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground 
+    prose-p:text-muted-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline 
+    prose-strong:text-foreground prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded 
+    prose-code:before:content-[''] prose-code:after:content-[''] 
+    prose-blockquote:border-l-primary prose-blockquote:bg-muted prose-blockquote:py-1;
+  }
+
+  .about-features {
+    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12;
+  }
+
+  .about-feature {
+    @apply text-center p-6 card;
+  }
+
+  .about-feature-icon {
+    @apply w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4;
+  }
+
+  .about-team {
+    @apply grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-12;
+  }
+
+  .about-team-member {
+    @apply text-center card p-6;
+  }
+
+  .about-team-avatar {
+    @apply w-16 h-16 rounded-full mx-auto mb-4 bg-muted;
+  }
+}

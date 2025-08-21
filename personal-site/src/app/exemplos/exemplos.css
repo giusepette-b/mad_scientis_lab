@@ -1,0 +1,29 @@
+@layer components {
+  .examples-container {
+    @apply container-custom py-8;
+  }
+
+  .examples-grid {
+    @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .examples-filter {
+    @apply mb-8 flex flex-wrap gap-4;
+  }
+
+  .examples-filter-btn {
+    @apply badge cursor-pointer transition-all hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .examples-filter-btn.active {
+    @apply badge-primary;
+  }
+
+  .examples-search {
+    @apply input mb-8 w-full max-w-md;
+  }
+
+  .examples-empty {
+    @apply text-center py-12 text-muted-foreground;
+  }
+}

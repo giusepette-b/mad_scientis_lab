@@ -1,0 +1,45 @@
+@layer components {
+  .example-card {
+    @apply card group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .example-card-header {
+    @apply card-header;
+  }
+
+  .example-card-title {
+    @apply card-title group-hover:text-primary transition-colors;
+  }
+
+  .example-card-description {
+    @apply card-description;
+  }
+
+  .example-card-content {
+    @apply card-content;
+  }
+
+  .example-card-footer {
+    @apply card-footer justify-between;
+  }
+
+  .example-tags {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .example-tag {
+    @apply badge badge-outline text-xs;
+  }
+
+  .example-preview {
+    @apply relative overflow-hidden rounded-lg bg-muted aspect-video;
+  }
+
+  .example-preview-placeholder {
+    @apply absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100;
+  }
+
+  .example-preview-code {
+    @apply code-block;
+  }
+}
